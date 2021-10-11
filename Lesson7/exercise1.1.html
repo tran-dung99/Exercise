@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="pratice2.js"></script>
+</head>
+<body>
+<script>
+let pointphysic;
+let pointchemistry;
+let pointbyology;
+pointphysic = prompt(" Nhập điểm mô vật lý");
+pointchemistry = prompt("Nhập điểm môn hóa học");
+pointbyology = prompt("Nhập điểm môn sinh học");
+let Physic = parseInt(pointphysic);
+let chemistry = parseInt(pointchemistry);
+let byology = parseInt(pointbyology)
+let mediumscore = (Physic + chemistry +byology)/3;
+let totalscore = (Physic+chemistry+byology);
+document.write("Điểm trung bình :" + mediumscore);
+document.write('<br/>');
+document.write("Điểm tổng :"+ totalscore);
+</script>
+</body>
+</html>
