@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="input"><input type="text" id="input"></label><br><br>
+<button onclick="myfunction()"> click</button>
+</body>
+</html>
+<script>
+    function myfunction(){
+        let value = document.getElementById('input').value;
+         if ( !isNaN(parseFloat(value))) {
+             if( value %5==0) {
+                 if(value %9==0) {
+                     alert('true')
+                 }else{ alert('false')
+                 }
+             }else{
+                 alert('false')
+             }
+         }else if(typeof value=='string') {
+             if (value=='hello') {
+                 alert('true')
+             }else{
+                 alert('false')
+             }
+         }
+    }
+</script>
