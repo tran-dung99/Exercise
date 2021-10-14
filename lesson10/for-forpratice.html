@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+<script>
+    let count = " <table border='1' width='300' cellSpacing='0' cellPadding='3px'> "
+    for (let i = 1; i <= 10; i++) {
+        count = count + "<tr>"
+        for (let j = 1; j <= 10; j++) {
+            count = count + "<td>" + i * j + "</td>"
+        }
+        count = count + "</tr>"
+        j = 1
+    }
+    count = count + "</table>"
+    document.write(count)
+</script>
+</table>
+</body>
+</html>
