@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> °C</p>
+<label><input type="text" id="doC"><br></label>
+<p id="doF"> °F </p>
+<button onclick="myfunction()">click</button>
+</body>
+<script>
+    function myfunction() {
+        let c = +document.getElementById('doC').value;
+        let F = c * 9 / 5 + 32
+        document.getElementById('doF').innerHTML="°F :" + F
+    }
+</script>
+</html>

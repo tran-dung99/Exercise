@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Nhập điểm kiểm tra</h3>
+<label><input type="text" id="testscore"></label>
+<h3>Nhập điểm Giữa kỳ</h3>
+<label><input type="text" id="middlescore"></label>
+<h3>Nhập điểm Cuối lỳ</h3>
+<label><input type="text" id="lastscore"></label>
+<button onclick="check()">click</button>
+<p id="result">Loại : </p>
+</body>
+<script>
+function check(){
+    let testO = +document.getElementById('testscore').value;
+    let testT = +document.getElementById('middlescore').value;
+    let testF = +document.getElementById('lastscore').value;
+    let average = (testO + testT + testF*2)/4;
+    if(average>=8.0) {
+        document.getElementById('result').innerHTML = "Loại: Giỏi"
+    }else if(average>=6.5) {
+        document.getElementById('result').innerHTML = "Loại: Khá"
+    }else if(average>=5.0) {
+        document.getElementById('result').innerHTML = "Loại: Trung bình"
+    }else{
+        document.getElementById('result').innerHTML = "Loại: Yếu"
+    }
+}
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = + prompt("nhập a:");
+    let b = + prompt("nhập b:");
+    let c = + prompt("nhập c:");
+    if(a === 0) {
+        if(b === 0){
+            if(c === 0) {
+                alert("phương trình vô số nghiệm")
+            }else{
+                alert("phương trình vô nghiệm")
+            }
+        }else{
+            let x= eval(-c/b);
+            alert("phương trình có nghiệm x= " + x)
+        }
+    } else if(a != 0){
+        var delta = b**2 - 4*a*c;
+        if(delta>0){
+            let x1=(-b+Math.sqrt(delta))/(2*a) //x1=(-y-Math.sqrt(delta))/(2*x)
+            let x2=(-b-Math.sqrt(delta))/(2*a)
+            alert("phương trình có nghiệp x1="+ x1 +"và x2="+x2)
+        }else if(delta === 0){
+            let x= -b/(2*c)
+            alert("phương trình có nghiệp kép x1=x2="+x)
+        }else{
+            alert("phương trình vô nghiệm")
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+     let numberO = +prompt("Nhập số thứ 1 :");
+     let numberT = +prompt("Nhập số thứ 2 :");
+     let numberF = +prompt("Nhập số thứ 3 :");
+     if(numberO > numberT){
+         if(numberO >numberF){
+             alert( numberO + " là số lớn nhất");
+         }else if(numberT>numberF){
+             alert(numberT+" là số lớn nhất");
+         } else{
+             alert(numberF+" là số lớn nhất");
+         }
+     }else if(numberT>numberF){
+         alert( numberT + " là số lớn nhất");
+     }else {
+         alert( numberF + " là số lớn nhất");
+     }
+</script>
+</body>
+</html>

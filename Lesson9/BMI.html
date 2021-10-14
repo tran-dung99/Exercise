@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="input1"><input type="text" id="input1" placeholder="Nhập cân nặng"></label>
+<br><br>
+<label for="input2"><input type="text" id="input2" placeholder="Nhập chiều cao"></label>
+<br>
+<p id="result"></p>
+<button onclick="letGo()">Result</button>
+</body>
+</html>
+<script>
+
+    function letGo() {
+        let weight = +(document.getElementById('input1').value);
+        let height = +(document.getElementById('input2').value);
+        let BMI = weight / (height ** 2);
+        if (BMI < 18.5) {
+            document.getElementById('result').innerHTML = "Underweight" ;
+        } else if (25 >= BMI) {
+            document.getElementById('result').innerHTML = "Normal";
+        } else if (30 > BMI) {
+            document.getElementById('result').innerHTML = "Overweight";
+        } else if (BMI >= 30) {
+            document.getElementById('result').innerHTML = "Obese";
+        }
+    }
+
+
+</script>

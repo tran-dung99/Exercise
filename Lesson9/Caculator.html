@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="exercise2.css">
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4"><input type="text" id="result"></td>
+    </tr>
+    <tr>
+        <td><button value="1"  onclick="result.value+=this.value">1</button></td>
+        <td><button value="2" onclick="result.value+=this.value">2</button></td>
+        <td><button value="3" onclick="result.value+=this.value">3</button></td>
+        <td><button value="+" onclick="result.value+=this.value">+</button></td>
+    </tr>
+    <tr>
+        <td><button value="4" onclick="result.value+=this.value">4</button></td>
+        <td><button value="5" onclick="result.value+=this.value">5</button></td>
+        <td><button value="6" onclick="result.value+=this.value">6</button></td>
+        <td><button value="-" onclick="result.value+=this.value">-</button></td>
+    </tr>
+    <tr>
+        <td><button value="7" onclick="result.value+=this.value">7</button></td>
+        <td><button value="8" onclick="result.value+=this.value">8</button></td>
+        <td><button value="9" onclick="result.value+=this.value">9</button></td>
+        <td><button value="*" onclick="result.value+=this.value">x</button></td>
+    </tr>
+    <tr>
+        <td><button value="C" onclick="result.value=''">C</button></td>
+        <td><button value="0" onclick="result.value+=this.value">0</button></td>
+        <td><button value="=" onclick="result.value= eval (result.value)">=</button></td>
+        <td><button value="/" onclick="result.value+=this.value">/</button></td>
+    </tr>
+</table>
+</body>
+</html>
