@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thunhap = +prompt("Thu nhập không bao gồm các khoản được miễn thuế ");
+    let tienthue;
+    if(5000000>=thunhap) {
+         tienthue = (thunhap * 5)/100;
+        alert("tiền thuế = " + tienthue)
+    }else if(10000000>= thunhap) {
+         tienthue = (thunhap*10)/100;
+        alert("tiền thuế = " + tienthue)
+    }else if(18000000>= thunhap) {
+         tienthue = (thunhap * 15)/100;
+        alert("tiền thuế = " + tienthue)
+    }else if(32000000>= thunhap) {
+         tienthue = (thunhap * 20)/100;
+        alert("tiền thuế = " + tienthue)
+    }else if(52000000>= thunhap) {
+         tienthue = (thunhap * 25)/100;
+        alert("tiền thuế = " + tienthue)
+    }else if(80000000>= thunhap) {
+         tienthue = (thunhap * 30)/100;
+        alert("tiền thuế = " + tienthue)
+    }else if(80000000 < thunhap) {
+         tienthue = (thunhap * 35)/100;
+        alert("tiền thuế = " + tienthue)
+    }
+</script>
+</body>
+</html>

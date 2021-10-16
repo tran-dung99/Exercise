@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="pratice2.css">
+</head>
+<body>
+<table>
+    <tr>
+        <th> Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><input type="text" name="amount" id="price"></td>
+        <td><select id="fromcurrency">
+            <option value="VNĐ">VNĐ</option>
+            <option value="USD" >USD</option>
+
+        </select></td>
+        <td><select id="tocurrency">
+            <option value="USD">USD</option>
+            <option value="VNĐ">VNĐ</option>
+        </select></td>
+        <td><button type="button" onclick="show()" >convert</button></td>
+    </tr>
+</table>
+<p id="result">kết quả :</p>
+</body>
+</html>
+<script>
+function show(){
+    let input = parseInt(document.getElementById('price').value);
+    let fromcurrency = parseInt(document.getElementById('fromcurrency').value);
+    let tocurrency = parseInt(document.getElementById('tocurrency').value);
+    if ((fromcurrency === USD && tocurrency===VNĐ)){
+        document.getElementById('result').innerHTML="kết quả :" + input*23000;
+    }else if((fromcurrency=== VNĐ)&&(tocurrency===USD)){
+        document.getElementById('result').innerHTML="kết quả :" + input/23000;
+    }
+}
+</script>

@@ -5,6 +5,33 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let bac1 = 50*1678;
+    let bac2 = 50*1734;
+    let bac3 = 100*2014;
+    let bac4 = 100*2536;
+    let bac5 = 100*2834;
+    let sodien = +prompt("Nhập số điện: ");
+    if(sodien <= 50) {
+        let tiendien = sodien*1678
+        alert("tiền điện là  " + tiendien)
+    }else if(100 >= sodien ) {
+        let tiendien = bac1 + (sodien - 50 )*1734;
+        alert("tiền điện là "+ tiendien )
+    }else if(200 >= sodien ) {
+        let tiendien = bac1 +bac2 +(sodien - 100)*2014 ;
+        alert("tiền điện là "+ tiendien )
+    }else if(300>=sodien) {
+        let tiendien = bac1 +bac2 +bac3 +(sodien - 200)*2536;
+        alert("tiền điện là "+ tiendien )
+    }else if(400 >= sodien) {
+        let tiendien = bac1 +bac2 +bac3 +bac4 + (sodien - 300)*2834;
+        alert("tiền điện là "+ tiendien )
+    }else if(sodien >400){
+        let tiendien = bac1 +bac2 +bac3 +bac4 + bac5 + (sodien - 400)*2927
+        alert("tiền điện là "+ tiendien )
+    }
 
+</script>
 </body>
 </html>
