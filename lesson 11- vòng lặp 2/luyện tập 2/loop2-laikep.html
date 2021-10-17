@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //lãi suất 7%/năm
+    let money = prompt("Số tiền gốc gửi vào : (triệu)");
+    let year = prompt("Số năm gửi : ");
+    for (let i = 1; i <= year ; i++) {
+        let tienLai = 1 + 0.07
+        money *= tienLai
+    }
+    alert ( "số tiền ban nhận được sau " + year + " năm là :" + money +" triệu")
+</script>
+</body>
+</html>

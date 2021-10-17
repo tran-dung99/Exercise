@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="start()" > click</button>
+</body>
+</html>
+<!--<script>-->
+<!--    function start(){-->
+<!--        let firstNumber = +prompt("Nhập số đầu tiên : ");-->
+<!--        let lastNumber = +prompt("Nhập số cuối cùng : ");-->
+<!--        let ranDom = Math.floor(Math.random()*firstNumber + firstNumber)+ lastNumber;-->
+<!--        for (let i = 1; i <4 ; i++) {-->
+<!--            let number = +prompt("Nhập số bạn chọn : ")-->
+<!--            if( number === ramDom ) {-->
+<!--                alert( "WIN")-->
+<!--                break;-->
+<!--            }else if( number > ranDom) {-->
+<!--                    alert( "hãy chọn số nhỏ hơn")-->
+<!--                } else if( number < ranDom) {-->
+<!--                    alert( "hãy chọn số lớn hơn")-->
+<!--                }-->
+<!--            }-->
+<!--        }-->
+<!--</script>-->
+
+<script>
+    let firstNumber = +prompt("Vui lòng nhập số đầu tiên: ");
+    let lastNumber = +prompt("Vui lòng nhập số cuối cùng:   ");
+    let luckyNumber;
+    if(firstNumber >lastNumber){
+        luckyNumber =Math.floor(Math.random()*(firstNumber-lastNumber +1)) + lastNumber;
+    } else {
+        luckyNumber = Math.floor(Math.random()*(lastNumber-firstNumber +1)) +firstNumber;
+    }
+    for (let i=0;i<=2 ;i++){
+        let numbers = +prompt("Vui lòng nhập số dự đoán");
+        if(luckyNumber === numbers) {
+            alert("Chúc Mừng bạn đã đoán đúng !")
+            break;
+        }else {
+            if(luckyNumber> numbers){
+                alert("Bạn hãy nhập số lớn hơn !")
+            }else {
+                alert("Bạn hãy nhập số nhỏ hơn !")
+            }
+
+        }
+    }
+
+</script>
+</body>
+</html>

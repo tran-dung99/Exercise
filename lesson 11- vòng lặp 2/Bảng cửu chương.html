@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    document.write("<table style='border: 1px solid black; left: 100px' >");
+    for (let i = 1; i <= 9 ; i++) {
+        document.write("<tr style='border: 1px solid black'>")
+        for (let j = 2; j <=9 ; j++) {
+            let total = i * j;
+            document.write("<td style='border: 1px solid black' width='100px'>" + i + "x" + j + "=" + total +"</td>")
+        }
+        document.write("</tr>")
+        document.write("<br>")
+
+    }
+</script>
+</body>
+</html>

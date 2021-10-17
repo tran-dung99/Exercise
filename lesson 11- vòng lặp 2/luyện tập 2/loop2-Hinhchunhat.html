@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let rong = "*";
+    for (let i = 1; i <= 21; i++) {
+        document.write(rong)
+    }
+    document.write("<br>")
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 21; j++) {
+            if (j == 1 || j == 21) {
+                document.write(rong)
+            } else {
+                document.write('&ensp;')
+            }
+        }
+        document.write("<br>")
+    }
+    for (let i = 1; i <= 21; i++) {
+        document.write(rong)
+    }
+</script>
+</body>
+</html>

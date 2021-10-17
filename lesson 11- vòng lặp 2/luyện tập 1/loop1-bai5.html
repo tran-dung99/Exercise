@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a1 = 0;
+    let a2 = 1;
+    let a3;
+    let sum = 1;
+    for (let i = 3; i <=20 ; i++) {
+        a3 = a1 + a2;
+        a1 = a2
+        a2 = a3
+        sum += a3
+    }
+    alert ("Tổng 20 số đầu trong fibonacci: " + sum);
+</script>
+</body>
+</html>
