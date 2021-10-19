@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = [-1,5,11,3,9,-5];
+    let fisrt = 0;
+    let last = 5;
+    while(fisrt < last) {
+        let b = number[fisrt]
+        number[fisrt] = number[last];
+        number[last] = b;
+        fisrt++
+        last--
+    }
+    console.log(number)
+</script>
+</body>
+</html>

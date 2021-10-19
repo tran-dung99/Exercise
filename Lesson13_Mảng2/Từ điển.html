@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Từ điển anh - việt giới hạn từ :D</h1>
+<label><input type="text" id="input"></label>
+<button onclick="start()">Search</button>
+<p id="result"> Kết quả:</p>
+</body>
+</html>
+<script>
+    function start() {
+        let tiengAnh = ["parents", "mother", "father", "wife", "son"]
+        let tiengViet = ["Bố mẹ", "Mẹ", "Bố", "Vợ", "con trai"]
+        let value = document.getElementById('input').value
+        for (let i = 0; i < tiengAnh.length; i++) {
+            if (value == tiengAnh[i]) {
+                document.getElementById('result').innerHTML = 'Kết quả:' + tiengViet[i]
+                break;
+            }
+            if (value !== tiengAnh[i]) {
+                document.getElementById('result').innerHTML = 'Không tìm thấy kết quả'
+            }
+        }
+    }
+
+</script>

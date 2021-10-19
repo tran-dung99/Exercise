@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = [-1,5,11,3,9,-5];
+    let max = number[0]
+    let sum = 0 ;
+    let average
+    for (let i = 1; i < number.length ; i++) {
+        if( number[i] > max) {
+            max = number[i]
+        }
+    }
+    for (let i = 0; i < number.length ; i++) {
+        sum += number[i]
+        average = Math.floor(sum / number.length)
+    }
+    alert (" giá trị lớn nhất = " + max + ' ; ' + 'giá trị trung bình là = ' + average)
+
+</script>
+
+</body>
+</html>
