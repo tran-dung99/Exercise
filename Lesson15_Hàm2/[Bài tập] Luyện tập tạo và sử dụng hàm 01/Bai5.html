@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = prompt("Nhập tên ngôi sao bạn yêu thích : ")
+    let arr = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+    let stars = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major' , 'Leo']
+    function search(name){
+        let check = true;
+        let count = 0;
+        let i = 0
+        for ( i ; i < arr.length; i++) {
+            if(name == arr[i]) {
+                check = true
+                count = 0
+                break;
+            }else{
+                count += 1
+            }
+        }
+        if(check){
+            alert(name + " thuộc chòm sao " + stars[i])
+        }else if(count !== 0) {
+            alert( "Không tìm thấy " + name)
+        }
+    }
+    search(input)
+</script>
+</body>
+</html>

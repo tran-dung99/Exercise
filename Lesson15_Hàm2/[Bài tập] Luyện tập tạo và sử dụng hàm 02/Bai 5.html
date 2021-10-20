@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function minVaue(a,b,c) {
+        let min = a
+        if( a > b) {
+            min = b
+        }else if(a > c) {
+            min = c
+        }
+        alert("giá trị nhỏ nhất là :" + min)
+        return min
+    }
+    let number1 = +prompt("Nhập số a :");
+    let number2 = +prompt("Nhập số b :");
+    let number3 = +prompt("Nhập số c :");
+    minVaue(number1,number2,number3)
+</script>
+</body>
+</html>

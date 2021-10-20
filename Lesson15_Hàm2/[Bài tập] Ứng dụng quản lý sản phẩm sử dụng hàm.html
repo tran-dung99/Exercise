@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="add"> <button onclick="addProduct()">Thêm</button>
+</body>
+</html>
+<script>
+    let arr = ['Sony Xperia', 'Nokia 6', 'Apple iphone 6S', 'Xiaomi Mi 5s Plus']
+    document.write("<table id='table'>")
+    for (let i = 0; i < arr.length; i++) {
+        document.write("<tr>")
+        document.write("<td>" + arr[i] +"</td>")
+        document.write("<td>" + "<button onclick='edit()'>Edit</button>" + "</td>")
+        document.write("<td>" + "<button onclick='delete()'>Delete</button>" + "</td>")
+        document.write("</tr>")
+        document.write("<br>")
+    }
+    document.write("</table>")
+    //hàm thêm sản phẩm
+    function addProduct(){
+        let news = document.getElementById('add').value;
+        arr.push(news)
+        alert("Thêm sản phẩm " + news)
+        document.getElementById('add').value = '';
+    }
+</script>

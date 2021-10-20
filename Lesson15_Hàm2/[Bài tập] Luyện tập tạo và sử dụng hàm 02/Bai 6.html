@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function soNguyenDuong(number) {
+        let check = true;
+        if (isNaN(number)) {
+            check = false
+        } else if (number >= 0) {
+            check = true
+        } else {
+            check = false
+        }
+    alert(check)
+    return check
+    }
+    let input = prompt("Nhập vào số nguyên dương: ");
+    soNguyenDuong(input)
+</script>
+</body>
+</html>

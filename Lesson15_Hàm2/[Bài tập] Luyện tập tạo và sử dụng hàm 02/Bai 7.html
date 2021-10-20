@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function change(a,b) {
+        let arr = [a,b]
+        b = arr[0]
+        arr[0] = arr[1]
+        arr[1] = b
+        return arr
+    }
+    let number1 = + prompt("nhập số nguyên a:");
+    let number2 = + prompt("nhập số nguyên b:");
+    alert("a,b = " + change(number1,number2))
+</script>
+</body>
+</html>
