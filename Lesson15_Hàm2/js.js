@@ -4,9 +4,9 @@ function showProduct() {
     let content=''
     for (let i = 0; i < product.length; i++) {
         content += ' <tr>\n' +
-            '        <td style="text-align: left"> '+ product[i]+'</td>\n' +
-            '        <td><button onclick="editProduct('+ i +')" style="background: dodgerblue; size: 200px">Edit</button> </td>\n' +
-            '        <td><button onclick="deleteProduct('+ i +')" style="background: dodgerblue; size: 200px"> Delete</button></td>\n' +
+            '        <td style="text-align: left; width: 200px"> '+ product[i]+'</td>\n' +
+            '        <td><button onclick="editProduct('+ i +')"  >Edit</button> </td>\n' +
+            '        <td><button onclick="deleteProduct('+ i +')" > Delete</button></td>\n' +
             '    </tr>'
     }
     document.getElementById('productList').innerHTML= content

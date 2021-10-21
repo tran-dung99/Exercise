@@ -8,14 +8,36 @@
 <input type="text" id="inputa">
 <input type="text" id="inputb">
 <input type="text" id="inputc">
+<button onclick="show()">click me</button>
 <br>
 <p id="result"></p>
 </body>
 </html>
 <script>
-    let inputO= parseInt(document.getElementById('inputa'));
-    let inputT= parseInt(document.getElementById('inputb'));
-    let inputTh= parseInt(document.getElementById('inputc'));
-    let maxvalue= inputO
-    if()
+    function show() {
+        let inputO = parseInt(document.getElementById('inputa').value);
+        let inputT = parseInt(document.getElementById('inputb').value);
+        let inputTh = parseInt(document.getElementById('inputc').value);
+        if (inputO > inputT) {
+            if (inputO > inputTh) {
+                if (inputT > inputTh) {
+                    document.getElementById('result').innerHTML = inputT + 'là số lớn thứ 2';
+                } else {
+                    document.getElementById('result').innerHTML = inputTh + 'là số lớn thứ 2';
+                }
+            } else {
+                document.getElementById('result').innerHTML = inputO + 'là số lớn thứ 2';
+            }
+        } else if (inputO < inputT) {
+            if (inputO < inputTh) {
+                if (inputT < inputTh) {
+                    document.getElementById('result').innerHTML = inputT + 'là số lớn thứ 2';
+                } else {
+                    document.getElementById('result').innerHTML = inputTh + 'là số lớn thứ 2';
+                }
+            } else {
+                document.getElementById('result').innerHTML = inputO + 'là số lớn thứ 2';
+            }
+        }
+    }
 </script>

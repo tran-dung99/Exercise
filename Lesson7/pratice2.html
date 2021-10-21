@@ -5,6 +5,41 @@
     <title>Title</title>
 </head>
 <body>
-<script src="pratice2.js"></script>
+<table style="width: 50%; text-align: left">
+    <tr>
+       <th>Amount</th>
+        <th> From Currency</th>
+        <th> To Currency</th>
+    </tr>
+    <tr>
+        <td><lable for="amount"><input type="text" id="amount"></lable></td>
+        <td><lable for="fromcurrency"><select id="fromcurrency">
+            <option value="VNĐ"> Việt Nam</option>
+            <option value="USD"> USD</option>
+        </select>
+            </lable>
+        </td>
+        <td><lable for="tocurrency"></lable><select id="tocurrency">
+            <option value="USD"> USD</option>
+            <option value="VNĐ"> Việt Nam</option>
+        </select>
+            </lable>
+        </td>
+        <td> <button onclick="myfunction()">convert</button></td>
+    </tr>
+</table>
+<p id="result"></p>
 </body>
 </html>
+<script>
+    function myfunction() {
+        let input = parseInt(document.getElementById('amount').value);
+        let fromcurrency = parseInt(document.getElementById('fromcurrency').value);
+        let tocurrency = parseInt(document.getElementById('tocurrency').value);
+        if (fromcurrency === "USD" && tocurrency === "VNĐ") {
+            document.getElementById('result').innerHTML = "kết quả là:" + (input / 23000)
+        } else if (fromcurrency === "VNĐ" && tocurrency === "USD") {
+            document.getElementById('result').innerHTML = "kết quả là:" + (input * 23000)
+        }
+    }
+</script>
