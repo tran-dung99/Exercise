@@ -7,25 +7,21 @@
 <body>
 <script>
     let arr1 = ['H','e','l','l','o',' ','w','o','r','l','d','!']
-    let kyTu = 'u'
-    function countO(arr,character){
+    let kyTu = prompt("nhập ký tự")
+    function display(arr,character){
         let count = 0
-        let dem = 0
         for (let i = 0; i < arr.length; i++) {
-            if( character == arr[i]) {
+            if( character === arr[i]) {
                 count += 1
-                dem = 0
-            }else {
-                dem += 1
             }
         }
-        if(check) {
-            return count
-        }else if(dem !== 0 ) {
-            return -1
+        if(count !== 0) {
+            alert("ký tự " + character + " xuất hiện " +  count + " lần")
+        }else  {
+            alert("ký tự " + character + " không xuất hiện " )
         }
     }
-    alert(countO(arr1,kyTu))
+    display(arr1,kyTu)
 </script>
 </body>
 </html>

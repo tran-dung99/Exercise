@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = ['H','e','l','l','o',' ','w','o','r','l','d','!']
+    let kyTu = 'l'
+    function check(arr,character){
+        let result = []
+        for (let i = 0; i < arr.length; i++) {
+            if(character == arr[i]){
+                 result = arr.split('character')
+            }
+        }
+        if(result.length > 0) {
+            alert("ký tự " + character + " xuất hiện " +  result.length + "lần")
+        }else if(result.length <= 0){
+            alert("ký tự " + character + " không xuất hiện ")
+        }
+    }
+    check(arr1,kyTu)
+</script>
+</body>
+</html>
