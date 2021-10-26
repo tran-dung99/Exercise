@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <script src="js.js"></script>-->
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid black"></canvas>
+</body>
+</html>
+<script>
+    // // //khai báo hình tron// tạo lớp
+    function Circle(x,y,radius) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }
+    //hàm tạo hình tròn
+    function drawCircle() {
+        let ctx = document.getElementById('myCanvas').getContext('2d');
+        let circle = new Circle(80, 80, 80);
+        ctx.beginPath();// bắt đầu nét vẽ
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI)
+        ctx.fill() // tạo nét vẽ
+        ctx.closePath()
+    }
+
+let circle = new Circle()
+    setInterval(function() {
+        creatCircle()
+        x += 2
+        y += 2
+    },200)
+    //Tạo bán kính ngẫu nhiên
+    // function creatCircle() {
+    //         let ctx = document.getElementById('myCanvas').getContext('2d');
+    //         let radius = Math.floor(Math.random()*80)
+    //         let circle = new Circle(500, 500, radius);
+    //         ctx.beginPath();
+    //         ctx.arc(circle.x, circle.y, circle.radius, 0,2*Math.PI )
+    //         ctx.fill()
+    //     }
+        //Tạo với màu + bán kính ngẫu nhiên
+       // function getRanDomHex() { // tạo hàm số ngẫu nhiên trong màu
+       //  return Math.floor(Math.random()*255);
+       // }
+       // function getRanDomColor() {
+       //  let red = getRanDomHex();
+       //  let green = getRanDomHex();
+       //  let blue = getRanDomHex();
+       //  return "rgb(" + red + "," + blue + "," + green +")";
+       // }
+       // function creatCircle() {
+       //  let ctx = document.getElementById('myCanvas').getContext('2d');
+       //  let radius = Math.floor(Math.random()*100);
+       //  //tạo vị trí ngẫu nhiên
+       //  let x = Math.random()*window.innerWidth;
+       //  let y = Math.random()*window.innerHeight
+       //  let color = getRanDomColor();
+       //  let circle = new Circle(x, y, radius) ;
+       //  ctx.beginPath();
+       //  ctx.arc(circle.x, circle.y, circle.radius, 0, 2*Math.PI)
+       //  ctx.fillStyle = color;
+       //  ctx.fill()
+       // }
+    // Tạo nhiều hình tròn với vị trí ngẫu nhiên
+    // function creatLoopCircle() {
+    //     for (let i = 0; i < 30; i++) {
+    //         creatCircle()
+    //     }
+    // }
+
+</script>

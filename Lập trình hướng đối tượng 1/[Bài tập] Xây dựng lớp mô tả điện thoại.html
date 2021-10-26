@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        status;
+        name;
+        id;
+        color;
+        battery = 100;
+        typingMess = [];
+        receiveMess = [];
+        sendMess = [];
+        constructor(status,name,id,color) {
+            this.name = name;
+            this.id = id;
+            this.color = color;
+            this.status = status;
+        }
+       // chức năng bật tắt đt
+        switchMobie() {
+            if(this.battery < 0) {
+                this.status = false
+            }else {
+                this.status = !this.status
+            }
+        }
+        //giảm pin
+        decreaseBattery() {
+            if(this.battery > 0 && this.status) {
+            this.battery--
+            } else if(this.battery > 0) {
+                console.log("bật điện thoại")
+            }else {
+                battery = 0;
+                this.status = false
+            }
+        }
+        getBattery() {
+            return this.battery
+        }
+        getStatus() {
+            return this.status
+        }
+        setTypingMess(typingMess) {
+            this.typingMess = typingMess
+        }
+        getTypingMess() {
+            return this.typingMess
+        }
+        setReceiveMess(receiveMess) {
+            this.receiveMess = receiveMess
+        }
+        getReceiveMess() {
+            return this.receiveMess
+        }
+        setSendMess(sendmess) {
+            this.sendMess = sendmess
+        }
+        getSendMess() {
+            return this.sendMess
+        }
+        //chức năng xạc pin
+        chargeBattery() {
+            this.battery = 100
+        }
+          // chức năng soạn tin nhắn
+        typingMessage(message){
+            if(this.status) {
+                this.typingMess.push(message)
+            }else {
+                console.log("Hãy bật điện thoại")
+            }
+            this.decreaseBattery()
+        }
+        //chắc năng  nhận tin nhắn từ một đt khác
+        sendMessage(mobile) {
+            if(this.status && mobile.getStatus()) {
+            mobile.setReceiveMess(this.getTypingMess())
+            this.setSendMess(this.getTypingMess())
+            this.typingMess = [];
+            } else {
+                console.log("bật điện thoại")
+            }
+            this.decreaseBattery()
+        }
+    }
+    let oppo = new Mobile(false,'oppo',24,'red');
+    let iphone = new Mobile(false,'iphone',12,'green');
+    oppo.switchMobie()
+    oppo.typingMessage("hello,how are you ?")
+    console.log(oppo.getTypingMess())
+    oppo.sendMessage(iphone)
+</script>
+</body>
+</html>

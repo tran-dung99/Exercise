@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js.js"></script>
+</head>
+<body>
+<canvas id="mycanvas" width="400" height="400" style="border: 1px solid black"></canvas>
+</body>
+</html>
+<script>
+    let x = 20
+    let y = 20
+    let canvas= document.getElementById('mycanvas')
+    let ctx = canvas.getContext('2d');
+    function drawCircle() {
+        ctx.beginPath()
+        ctx.arc(x, y, 20, 0, 2 * Math.PI)
+        ctx.fillStyle = 'red'
+        ctx.fill()
+        ctx.closePath()
+    }
+    setInterval(function() {
+        ctx.clearRect(0,0, canvas.width, canvas.height)
+        drawCircle()
+        x += 1
+        y += 1
+
+    },300)
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        id;
+        name;
+
+        constructor(id,name) {
+            this.id = id;
+            this.name = name;
+            this.message = '';
+        }
+       setMessage(message) {
+           this.message = message
+        }
+       getMessage() {
+            return this.message
+       }
+       sendMessage(abc,mobile) {
+            mobile.setMessage(abc)
+       }
+    }
+    let iphone = new Mobile(24,"iphone13");
+    let oppo = new Mobile(37,"oppoA37");
+    iphone.sendMessage("hello cưng", oppo);
+    alert("tn đến từ iphone" + oppo.getMessage())
+</script>
+</body>
+</html>
