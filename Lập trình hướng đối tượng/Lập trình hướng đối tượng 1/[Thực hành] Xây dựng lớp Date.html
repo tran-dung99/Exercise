@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Date {
+        day;
+        month;
+        year;
+
+        constructor(day, month, year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+    }
+
+    getDay() {
+        return this.day;
+        }
+    setDay(day) {
+        this.day = day;
+    }
+    getMonth() {
+        return this.month;
+        }
+    setMonth(month) {
+        this.month = month;
+        }
+
+    getYear() {
+        return this.year;
+        }
+
+    setYear(year) {
+        this.year = year;
+        }
+    // getDate() {
+    //         return this.day
+    //         return this.month
+    //         return this.year
+    // }
+    setDate(day,month,year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+    }
+    toString( day, month, year) {
+            alert( day + '/'+  month  +'/'+ year )
+    }
+    }
+
+let date = new Date()
+    date.setDay(27)
+    date.setMonth(12)
+    date.setYear(1999)
+    alert(date.getDay()+'/'+date.getMonth()+'/'+ date.getYear())
+    date.setDate(30,10,1999)
+    // date.toString(getDate())
+    alert(date.getDay()+','+date.getMonth()+','+ date.getYear())
+    date.toString(30,10,1999)
+    alert(date.getDay()+','+date.getMonth()+','+ date.getYear())
+</script>
+</body>
+</html>

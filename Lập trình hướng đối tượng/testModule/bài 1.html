@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <strong>Enter a number:</strong>
+    <label><input type="text" id="input"></label>
+    <button onclick="start()">Show</button>
+    <p id="ketQua"></p>
+</form>
+<script>
+
+    function isPrime(number) {
+        let flag = true
+        if (number < 2) {
+            flag = false
+        } else if (number === 2) {
+            flag = true
+        } else {
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    flag = false
+                    break;
+                }
+            }
+        }
+        return flag
+    }
+
+    function start() {
+        let result = parseInt(document.getElementById('input').value);
+        for (let i = 1; i <= result; i++) {
+            if (isPrime(i) == true) {
+                document.getElementById('ketQua').innerHTML = i;
+
+            }
+        }
+    }
+</script>
+</body>
+</html>

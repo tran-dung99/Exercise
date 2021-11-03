@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="text-align: center">
+    <h1>Typing anthing slowly</h1>
+    <label>
+    <textarea style="text-align: center" name="txt" id="text" cols="40" rows="10"
+              onkeydown="writeText()"></textarea>
+    </label>
+</div>
+<script>
+    let text = " Tôi là đồ ngốc !!!"
+    // let string = " TÔI LÀ ĐỒ NGỐC!!!"
+    let arr = text.split("")
+    // let array = string.split("")
+     function writeText() {
+         let input= document.getElementById("text").value
+         let value = ""
+         if( input.length > 0) {
+             for( let i = 1; i <= input.length; i++ ) {
+                 value += arr[i]
+                 if ( i === arr.length) {
+                     document.getElementById("text").value = ""
+                     value = ""
+                 }
+             }
+         }
+         document.getElementById("text").value = value;
+         setTimeout(writeText, 1);
+     }
+
+</script>
+</body>
+</html>

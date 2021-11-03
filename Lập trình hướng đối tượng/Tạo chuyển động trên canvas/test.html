@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="js.js"></script>
+</head>
+<body>
+<canvas id="my-game" width="800" height="600" style="background-color: #f5a707"></canvas>
+</body>
+</html>
+<script>
+    let canvas = document.getElementById('my-game')
+    let pen = canvas.getContext('2d')
+     let ball = new Ball(x,20,'red',20,20)
+
+    ball.render(canvas)
+    function move() {
+        pen.clearRect(0,0,canvas.width,canvas.height)
+        ball.render(canvas)
+        x++
+        requestAnimationFrame(move)
+    }
+    move()
+</script>

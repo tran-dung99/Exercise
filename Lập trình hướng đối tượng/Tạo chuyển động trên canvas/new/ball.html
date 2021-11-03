@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="class ball.js"></script>
+</head>
+<body>
+<canvas id="myPaper" width="500" height="500" style="background: coral"></canvas>
+</body>
+</html>
+<script>
+    let canvas = document.getElementById('myPaper')
+    let pen = canvas.getContext('2d')
+    let balls = []
+
+    function randomNumber(min, max) {
+        let rank = Math.floor(Math.random()*(max - min) + min)
+        return rank
+    }
+    function randomColor() {
+           let r = randomNumber(0,225)
+           let g = randomNumber(0,225)
+           let b = randomNumber(0,225)
+        return "rgb(" + r + "," + g + "," + b + ")"
+    }
+
+    function createBall() {
+        for( let i = 0; i < 10; i++ ) {
+            let x = randomNumber(0, canvas.width)
+            // let y = randomNumber(0, canvas.height)
+            let color = randomColor()
+            let radius = randomNumber(10,30)
+            let speed = randomNumber(5,15)
+            let ball = new Ball(x,10,radius,color,speed)
+            ball.showBall(canvas)
+            balls.push(ball)
+        }
+    }
+
+    function moveRight() {
+       for( let i = 0; i < balls.length ; i++) {
+           balls[i].moveRight()
+           balls[i].showBall(canvas)
+           if(balls[i].x > canvas.width ) {
+               balls[i].xSpeed = -balls[i].xSpeed
+           }else if(balls[i].y > canvas.height ) {
+               balls[i].ySpeed = -balls[i].ySpeed
+           }
+       }
+    }
+
+    function main() {
+        pen.clearRect(0,0,canvas.width,canvas.height)
+        moveRight()
+        requestAnimationFrame(main)
+    }
+    createBall()
+    main()
+</script>

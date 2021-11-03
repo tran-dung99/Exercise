@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Remote.js"></script>
+    <script src="Tivi.js"></script>
+</head>
+<body>
+<script>
+    let tiVi = new Television('black',false,'VTV3',45);
+    let remote = new Remote(202);
+    tiVi.checkStatus()
+    tiVi.chargeChannel('VTV7')
+    remote.chargeChannel('VTV3',tiVi)
+    tiVi.volumeUp()
+    tiVi.volumeUp()
+    // remote.volumeUp(tiVi)
+    console.log(tiVi.getStatus())
+    remote.turnOn_OfTelevision(tiVi)
+
+</script>
+</body>
+</html>

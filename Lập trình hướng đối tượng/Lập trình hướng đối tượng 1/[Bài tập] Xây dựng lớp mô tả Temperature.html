@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class Temperature {
+      doC;
+      doF;
+      doKenvin;
+    constructor(doC) {
+        this.doC = doC
+    }
+    setdoCsangdoF() {
+        if(this.doC < -273 ) {
+            alert(" hãy tăng nhiệt độ C ")
+        }else{
+        this.doF = (this.doC * 1.8) +32
+        }
+    }
+    getdoCsangdoF() {
+        return this.doF
+    }
+    setdoCsangdoKenvin() {
+        if(this.doC < -273 ) {
+            alert(" hãy tăng nhiệt độ C ")
+        }else{
+        this.doKenvin = this.doC + 273.15
+        }
+    }
+    getdoCsangdoKenvin() {
+        return this.doKenvin
+    }
+  }
+
+  let temperature = new Temperature(-274);
+  temperature.setdoCsangdoF();
+  document.write("Độ F: " + temperature.getdoCsangdoF() + "<br>");
+  temperature.setdoCsangdoKenvin();
+  document.write("Độ K: " + temperature.getdoCsangdoKenvin())
+</script>
+</body>
+</html>

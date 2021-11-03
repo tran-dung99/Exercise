@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let yearValue = +prompt("nhập năm sinh của bạn : ")
+    let thisYear = new Date().getFullYear()
+
+    function age(year, thisYear) {
+        let age;
+        if (year > thisYear) {
+            alert("Không     hợp lệ")
+        } else {
+            age = thisYear - year
+        }
+        return age
+    }
+
+    alert("Tuổi của bạn là : " + age(yearValue, thisYear))
+</script>
